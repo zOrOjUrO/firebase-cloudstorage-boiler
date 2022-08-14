@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!--Linear Layout with horizontal orientation
+     and other properties-->
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Button for choosing image from gallery-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChoose"
+            android:text="Choose"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cornerRadius="10dp"
+            />
+
+        <!--Button for uploading image-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpload"
+            android:text="Upload"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cornerRadius="10dp"/>
+    </LinearLayout>
+
+    <!--Image View for showing image choosen from gallery-->
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginHorizontal="20dp"/>
+
+</RelativeLayout>
